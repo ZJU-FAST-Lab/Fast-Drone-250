@@ -43,7 +43,7 @@
 
   其中，飞控可选型号为CUAV NORA,V5+,X7，其他支持px4固件的飞控也可选用。机载电脑可选用DJI MANIFOLD 2-C 或 JETSON XAVIER NX。
 
-  3D打印件与碳板的STL模型及solidworks2019格式文件可以在model目录下找到
+  3D打印件与碳板的STL模型可以在model目录下找到
 
   ## 2. 三维模型拆解
 
