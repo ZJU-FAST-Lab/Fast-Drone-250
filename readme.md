@@ -6,7 +6,7 @@
 
 ## 1. 无人机硬件基本组成
 
-<img src="images\1.jpg.png" alt="1.jpg" style="zoom:50%;" />
+<img src="images\1.png" alt="1.jpg" style="zoom:50%;" />
 
 + 一个可以用遥控器控制飞行的无人机，需要的基本硬件有：*机架，电机，电调，飞控，接收机，遥控器，锂电池，BB响（电压计）*等
 
@@ -49,7 +49,7 @@
 
   + 机载电脑挂载MANIFOLD 2-C：
 
-  <img src="images\2.jpg" style="zoom:50%;" />
+  <img src="images\2.png" style="zoom:50%;" />
 
 + 机载电脑挂载XAVIER NX：待更新
 
