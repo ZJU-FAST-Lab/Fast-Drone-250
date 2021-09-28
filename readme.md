@@ -49,7 +49,7 @@
 
   + 机载电脑挂载MANIFOLD 2-C：
 
-  ![image-20210928211030557](images\2.jpg)
+  <img src="images\2.jpg" style="zoom:50%;" />
 
 + 机载电脑挂载XAVIER NX：待更新
 
