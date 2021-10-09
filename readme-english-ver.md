@@ -1,3 +1,9 @@
+### 更新!
+
+中文版readme请移步 [readme.md](readme.md).
+
+
+
 # Hardware Design of the FAST-LAB Autonomous Drone
 
 ## 0.Preview

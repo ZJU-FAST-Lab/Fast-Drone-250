@@ -1,3 +1,9 @@
+### update!
+
+Now the English version of the readme is available at [readme-english-ver.md](readme-english-ver.md).
+
+
+
 # FASTLAB 自主导航无人机硬件
 
 ## 0.概要
