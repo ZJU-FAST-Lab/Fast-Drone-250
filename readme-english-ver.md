@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ### 更新!
 
 中文版readme请移步 [readme.md](readme.md).
