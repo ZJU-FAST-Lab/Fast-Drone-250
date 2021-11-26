@@ -55,7 +55,9 @@
 
   <img src="images\2.png" style="zoom:50%;" />
 
-+ XAVIER NX version：to be updated.
++ XAVIER NX version：
+
+  ![3](images\3.png)
 
 ## 3. Environment of Onboard Computer
 

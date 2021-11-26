@@ -51,13 +51,15 @@ Now the English version of the readme is available at [readme-english-ver.md](re
 
   3D打印件与碳板的STL模型可以在model目录下找到
 
-  ## 2. 三维模型拆解
+  ## 2. 三维模型
 
   + 机载电脑挂载MANIFOLD 2-C：
 
   <img src="images\2.png" style="zoom:50%;" />
 
-+ 机载电脑挂载XAVIER NX：待更新
++ 机载电脑挂载XAVIER NX：
+
+  ![3](images\3.png)
 
 ## 3. 机载电脑环境
 
