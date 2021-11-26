@@ -57,7 +57,7 @@
 
 + XAVIER NX version：
 
-  ![3](images\3.png)
+  ![3](images/3.png)
 
 ## 3. Environment of Onboard Computer
 

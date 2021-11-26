@@ -59,7 +59,7 @@ Now the English version of the readme is available at [readme-english-ver.md](re
 
 + 机载电脑挂载XAVIER NX：
 
-  ![3](images\3.png)
+  ![3](images/3.png)
 
 ## 3. 机载电脑环境
 
