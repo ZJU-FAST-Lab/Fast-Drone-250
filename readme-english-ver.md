@@ -47,7 +47,7 @@
   | Dupont Thread              |                      | some     |            |             |                                                              |
   | XT60 Plug                  |                      | 1        |            |             |                                                              |
 
-  It should be noted that, the model selection of flight controller is CUAV NORA, V5+, X7, while any other FCU that supports PX4 firmware works, too. As for the onboard computer, you can choose DJI MANIFOLD 2-C or JETSON XAVIER NX.  The STL model of the 3D print part and the carbon fiber board can be found at catalog "model".
+  It should be noted that, the model selection of flight controller is CUAV NORA(Don't use NORA+, because it doesn't support this repo's firmware), V5+, X7, while any other FCU that supports PX4 firmware works, too. As for the onboard computer, you can choose DJI MANIFOLD 2-C or JETSON XAVIER NX.  The STL model of the 3D print part and the carbon fiber board can be found at catalog "model".
 
   ## 2. Disassembly of 3D model
 

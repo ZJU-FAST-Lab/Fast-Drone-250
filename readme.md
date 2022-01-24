@@ -25,7 +25,7 @@ Now the English version of the readme is available at [readme-english-ver.md](re
   | 机架             | QAV250               | 1    | 38   | 38   | https://item.taobao.com/item.htm?spm=a1z09.2.0.0.2abd2e8da0sHzh&id=520738516076&_u=l32egecqf290 |
   | 电调             | 银燕45A              | 4    | 89   | 356  | https://item.taobao.com/item.htm?spm=a1z09.2.0.0.2abd2e8da0sHzh&id=627250691828&_u=l32egecq104a |
   | 电机             | T-MOTOR F60 KV2550   | 4    | 159  | 636  | https://item.taobao.com/item.htm?spm=a230r.1.14.6.58866126r2mH5j&id=612118488792&ns=1&abbucket=3#detail |
-  | 飞控             | CUAV NORA            | 1    | 1669 | 1669 | https://item.taobao.com/item.htm?spm=a1z09.2.0.0.2abd2e8da0sHzh&id=618340579779&_u=l32egecq6321 |
+  | 飞控             | CUAV NORA            | 1    | 1669 | 1669 | （原版NORA似乎已停产，这个链接点进去是换了IMU的NORA+，不支持本项目的固件）https://item.taobao.com/item.htm?spm=a1z09.2.0.0.2abd2e8da0sHzh&id=618340579779&_u=l32egecq6321 |
   |                  | V5+                  | 1    | 1499 | 1499 | https://item.taobao.com/item.htm?spm=a1z10.5-c-s.w4002-22188405087.10.39df7ad6BKLAJz&id=594262853015 |
   |                  | X7                   | 1    | 1999 | 1999 | https://item.taobao.com/item.htm?spm=a1z10.5-c-s.w4002-22188405087.22.39df7ad6BKLAJz&id=617384615131 |
   | 机载电脑         | DJI MANIFOLD2-C      | 1    | 8799 | 8799 | https://m.dji.com/cn/product/manifold-2                      |
@@ -47,7 +47,7 @@ Now the English version of the readme is available at [readme-english-ver.md](re
   | 杜邦线           |                      | 若干 |      |      |                                                              |
   | XT60母头         |                      | 1    |      |      |                                                              |
 
-  其中，飞控可选型号为CUAV NORA,V5+,X7，其他支持px4固件的飞控也可选用。机载电脑可选用DJI MANIFOLD 2-C 或 JETSON XAVIER NX。
+  其中，飞控可选型号为CUAV NORA(官方店已经买不到了，在售的NORA+不支持本项目的固件),V5+,X7，其他支持px4固件的飞控也可选用。机载电脑可选用DJI MANIFOLD 2-C 或 JETSON XAVIER NX。
 
   3D打印件与碳板的STL模型可以在model目录下找到
 
