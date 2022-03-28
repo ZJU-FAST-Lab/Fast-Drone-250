@@ -1,0 +1,66 @@
+<launch>
+    <!-- number of moving objects -->
+    <arg name="obj_num" value="10" />
+    <arg name="drone_id" value="0"/>
+
+    <arg name="map_size_x" value="100"/>
+    <arg name="map_size_y" value="50"/>
+    <arg name="map_size_z" value="3.0"/>
+    <arg name="odom_topic" value="/vins_fusion/imu_propagate"/>
+    
+    <!-- main algorithm params -->
+    <include file="$(find ego_planner)/launch/advanced_param_exp.xml">
+        <arg name="drone_id" value="$(arg drone_id)"/>
+        <arg name="map_size_x_" value="$(arg map_size_x)"/>
+        <arg name="map_size_y_" value="$(arg map_size_y)"/>
+        <arg name="map_size_z_" value="$(arg map_size_z)"/>
+        <arg name="odometry_topic" value="$(arg odom_topic)"/>
+        <arg name="obj_num_set" value="$(arg obj_num)" />
+        <!-- camera pose: transform of camera frame in the world frame -->
+        <!-- depth topic: depth image, 640x480 by default -->
+        <!-- don't set cloud_topic if you already set these ones! -->
+        <arg name="camera_pose_topic" value="nouse1"/>
+        <arg name="depth_topic" value="/camera/depth/image_rect_raw"/>
+        <!-- topic of point cloud measurement, such as from LIDAR  -->
+        <!-- don't set camera pose and depth, if you already set this one! -->
+        <arg name="cloud_topic" value="nouse2"/>
+        <!-- intrinsic params of the depth camera -->
+        <arg name="cx" value="323.3316345214844"/>
+        <arg name="cy" value="234.95498657226562"/>
+        <arg name="fx" value="384.39654541015625"/>
+        <arg name="fy" value="384.39654541015625"/>
+        <!-- maximum velocity and acceleration the drone will reach -->
+        <arg name="max_vel" value="0.5" />
+        <arg name="max_acc" value="6.0" />
+        <!--always set to 1.5 times grater than sensing horizen-->
+        <arg name="planning_horizon" value="6" />
+        <arg name="use_distinctive_trajs" value="false" />
+        <!-- 1: use 2D Nav Goal to select goal  -->
+        <!-- 2: use global waypoints below  -->
+        <arg name="flight_type" value="1" />
+        <!-- global waypoints -->
+        <!-- It generates a piecewise min-snap traj passing all waypoints -->
+        <arg name="point_num" value="1" />
+        <arg name="point0_x" value="15" />
+        <arg name="point0_y" value="0" />
+        <arg name="point0_z" value="1" />
+        <arg name="point1_x" value="0.0" />
+        <arg name="point1_y" value="0.0" />
+        <arg name="point1_z" value="1.0" />
+        <arg name="point2_x" value="15.0" />
+        <arg name="point2_y" value="0.0" />
+        <arg name="point2_z" value="1.0" />
+        <arg name="point3_x" value="0.0" />
+        <arg name="point3_y" value="0.0" />
+        <arg name="point3_z" value="1.0" />
+        <arg name="point4_x" value="15.0" />
+        <arg name="point4_y" value="0.0" />
+        <arg name="point4_z" value="1.0" />
+    </include>
+    <!-- trajectory server -->
+    <node pkg="ego_planner" name="drone_$(arg drone_id)_traj_server" type="traj_server" output="screen">
+        <!-- <remap from="position_cmd" to="/setpoints_cmd"/> -->
+        <remap from="~planning/bspline" to="drone_$(arg drone_id)_planning/bspline"/>
+        <param name="traj_server/time_forward" value="1.0" type="double"/>
+    </node>
+</launch>

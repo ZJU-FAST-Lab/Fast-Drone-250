@@ -1,0 +1,19 @@
+<package>
+  <name>pose_utils</name>
+  <description>pose_utils</description>
+  <version>0.1.0</version>
+  <maintainer email="eeshaojie@ust.hk">Shaojie Shen</maintainer>
+  <maintainer email="wwuar@connect.ust.hk">william.wu</maintainer>
+  <license>LGPLv3</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+
+  <run_depend>roscpp</run_depend>
+  <export>
+    <cpp cflags="-I${prefix}/include"
+         lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib"/>
+  </export>
+
+</package>

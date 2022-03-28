@@ -1,0 +1,8 @@
+<launch>
+
+	<node pkg="px4ctrl" name="thrust_calibrate" type="thrust_calibrate.py" output="screen">
+		<param name="time_interval" value="1.0" />
+		<param name="mass_kg" value="10.7" />
+	</node>
+ 
+</launch>

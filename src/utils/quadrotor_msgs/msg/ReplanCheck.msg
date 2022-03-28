@@ -1,0 +1,12 @@
+Header header
+geometry_msgs/Vector3 start_velocity
+geometry_msgs/Vector3 start_acceleration
+geometry_msgs/Point[] plan_points
+geometry_msgs/Point[] check_points
+geometry_msgs/Vector3 stop_velocity
+geometry_msgs/Vector3 stop_acceleration
+float64               replan_time_length
+float64               check_points_time_interval
+float64               plan_points_time_interval
+uint32                trajectory_id
+float64               replan_to_global_time
