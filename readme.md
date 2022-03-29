@@ -13,13 +13,13 @@
 ## 第三章：飞控的安装与接线
 * 一定要注意电调信号线顺序！！！
   <img src="images\电机方向.jpg" alt="电机方向" style="zoom: 15%;" />
-
 * 飞控箭头与机头同向为正向，任意方向旋转90°的倍数也可以，后续可以在飞控设置内调整，推荐和视频内相同朝向摆放。
-* 强烈推荐使用硅胶杜邦线，常规杜邦线线材过硬，容易出现接触不良
+* <font color="#dd0000">强烈推荐使用硅胶杜邦线，常规杜邦线线材过硬，容易出现接触不良。</font>
+* 5V稳压模块注意贴黑胶带绝缘，周围注意贴一圈厚的海绵胶带来防止飞机降落时损坏5V模块，也可以考虑把5V模块用扎带扎在机臂旁边
 
 ## 第四章：飞控设置与试飞
 
-* 请烧录本git项目下的`/firmware/1.11.0.px4`固件
+* 请烧录本git项目下的`/firmware/px4_fmu-v5_default.px4`固件，这个固件是官方1.11.0版本固件编译而来，如有需要可以自行编译。实测1.13版本固件存在BUG，不建议使用，更老的固件版本未经测试。
 
 * 在飞控的sd卡的根目录下创建`/etc/extras.txt`，写入
 
@@ -99,7 +99,7 @@
   * `cd /opt/ros/noetic/lib/mavros`
   * `sudo ./install_geographiclib_datasets.sh`
 * 安装ceres与glog与ddyanmic-reconfigure
-  * 解压
+  * 解压`3rd_party.zip`压缩包
   * 进入glog文件夹打开终端
   * `./autogen.sh && ./configure && make && sudo make install`
   * `sudo apt-get install liblapack-dev libsuitesparse-dev libcxsparse3.1.2 libgflags-dev libgoogle-glog-dev libgtest-dev`
@@ -111,11 +111,10 @@
   * `sudo make install`
   * `sudo apt-get install ros-noetic-ddynamic-reconfigure`
 * 下载ego-planner源码并编译
-  * `mkdir fast_drone_ws/src`
-  * `cd fast_drone_ws/src`
   * `git clone https://github.com/ZJU-FAST-Lab/Fast-Drone-250`
-  * `cd ..`
+  * `cd Fast-Drone-250`
   * `catkin_make`
+  * `source devel/setup.bash`
   * `roslaunch ego_planner sing_run_in_sim.launch`
   * 在Rviz内按下键盘G键，再单击鼠标左键以点选无人机目标点
 
