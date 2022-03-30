@@ -118,11 +118,29 @@
   * `roslaunch ego_planner sing_run_in_sim.launch`
   * 在Rviz内按下键盘G键，再单击鼠标左键以点选无人机目标点
 
-待更新………
-
 ## 第八章：常用实验与调试软件的安装与使用
 
+* VScode：`sudo dpkg --i ***.deb`
+* Terminator：`sudo apt install terminator`
+* Plotjuggler：
+  * `sudo apt install ros-noetic-plotjuggler`
+  * `sudo apt install ros-noetic-plotjuggler-ros`
+  * `rosrun plotjuggler plotjugller`
+* Net-tools：
+  * `sudo apt install net-tools`
+  * `ifconfig`
+* ssh：
+  * `sudo apt install openssh-server`
+  * 在笔记本上：`ping 192.168.**.**`
+  * `sudo gedit /etc/hosts`
+  * 加上一行：`192.168.**.** fast-drone`
+  * `ping fast-drone`
+  * `ssh fast-drone@fast-drone`(`ssh 用户名@别名`)
+
+待更新………
+
 ## 第九章：Ego-Planner代码框架与参数介绍
+
 ## 第十章：VINS的参数设置与外参标定
 ## 第十一章：Ego-Planner的实验
 ## 番外一：硬件选型
