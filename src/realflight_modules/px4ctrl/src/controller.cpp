@@ -40,12 +40,12 @@ LinearControl::calculateControl(const Desired_State_t &des,
       double cos = std::cos(yaw_odom);
       roll = (des_acc(0) * sin - des_acc(1) * cos )/ param_.gra;
       pitch = (des_acc(0) * cos + des_acc(1) * sin )/ param_.gra;
-      yaw = fromQuaternion2yaw(des.q);
+      // yaw = fromQuaternion2yaw(des.q);
       yaw_imu = fromQuaternion2yaw(imu.q);
       // Eigen::Quaterniond q = Eigen::AngleAxisd(yaw,Eigen::Vector3d::UnitZ())
       //   * Eigen::AngleAxisd(roll,Eigen::Vector3d::UnitX())
       //   * Eigen::AngleAxisd(pitch,Eigen::Vector3d::UnitY());
-      Eigen::Quaterniond q = Eigen::AngleAxisd(yaw,Eigen::Vector3d::UnitZ())
+      Eigen::Quaterniond q = Eigen::AngleAxisd(des.yaw,Eigen::Vector3d::UnitZ())
         * Eigen::AngleAxisd(pitch,Eigen::Vector3d::UnitY())
         * Eigen::AngleAxisd(roll,Eigen::Vector3d::UnitX());
       u.q = imu.q * odom.q.inverse() * q;
