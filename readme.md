@@ -34,7 +34,7 @@
 
 * 修改`dshot_config`为dshot600
 
-* 修改`CBRK_SUPPLY_CHK`为894281
+* 修改`CBRK_SUPPLY_CHK`为894281 *执行这步跳过了电源检查，因此左侧栏的电池设置部分就算是红的也没关系*
 
 * 修改`CBRK_USB_CHK`为197848
 
@@ -115,7 +115,7 @@
   * `cd Fast-Drone-250`
   * `catkin_make`
   * `source devel/setup.bash`
-  * `roslaunch ego_planner sing_run_in_sim.launch`
+  * `roslaunch ego_planner single_run_in_sim.launch`
   * 在Rviz内按下键盘G键，再单击鼠标左键以点选无人机目标点
 
 ## 第八章：常用实验与调试软件的安装与使用
@@ -185,7 +185,7 @@
   * 重复上述操作直到走几圈后VINS的里程计数据偏差收敛到满意值（一般在0.3米内）
 * 建图模块验证
   * `sh shfiles/rspx4.sh`
-  * `roslaunch ego_planner sing_run_in_exp.launch`
+  * `roslaunch ego_planner single_run_in_exp.launch`
   * 进入远程桌面 `roslaunch ego_planner rviz.launch`
 
 ## 第十一章：Ego-Planner的实验
@@ -202,7 +202,7 @@
   
 * Ego-Planner实验
   * 自动起飞
-  * `roslaunch ego-planner sing_run_in_exp.launch`
+  * `roslaunch ego-planner single_run_in_exp.launch`
   * `sh shfiles/record.sh`
   * 进入远程桌面 `roslaunch ego_planner rviz.launch`
   * 按下G键加鼠标左键点选目标点使无人机飞行

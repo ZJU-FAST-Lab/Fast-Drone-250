@@ -1,6 +1,6 @@
 <launch>
 	<node name="vins_fusion" pkg="vins"  type="vins_node" output="screen" args="$(find vins)/../config/fast_drone_250.yaml"/>
 
-	<node name="loop_fusion" pkg="loop_fusion"  type="loop_fusion_node" args="$(find vins)/../config/fast_drone_250.yaml" output="screen"/>
+	<!-- <node name="loop_fusion" pkg="loop_fusion"  type="loop_fusion_node" args="$(find vins)/../config/fast_drone_250.yaml" output="screen"/> -->
 
 </launch> 
