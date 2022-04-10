@@ -8,7 +8,7 @@ rosbag record --tcpnodelay \
 /vins_fusion/camera_pose_visual \
 /vins_fusion/extrinsic \
 /vins_fusion/image_track \
-/vins_fusion/imu_propagate \
+/vins_estimator/imu_propagate \
 /vins_fusion/key_poses \
 /vins_fusion/keyframe_point \
 /vins_fusion/keyframe_pose \

@@ -184,7 +184,7 @@ Operating aerial robots is risky! Please strictly abide by the safety regulation
   
 * Accurate self-calibration of VINS external parameters  
   * `sh shfiles/rspx4.sh`
-  * `rostopic echo /vins_fusion/imu_propagate`
+  * `rostopic echo /vins_estimator/imu_propagate`
   * Pick up the robot and walk <font color="#dd0000">slowly</font>in the field. The lighting in the venue should not change too much.<font color="#dd0000">Do not use light sources that flicker</font>. Put as many clutter as possible to increase the feature points that VINS uses for matching
   * Replace the content in `vins_output/extrinsic_parameter.txt` to `body_T_cam0` and `body_T_cam1` of `fast-drone-250.yaml`
   * Repeat the above operation until the odometer data deviation of VINS converges to a satisfactory value after a few laps (usually within 0.3 meters)
@@ -196,7 +196,7 @@ Operating aerial robots is risky! Please strictly abide by the safety regulation
 ## Chapter 11: Experiments of Ego-Planner
 * Automatic takeoff
   * `sh shfiles/rspx4.sh`
-  * `rostopic echo /vins_fusion/imu_propagate`
+  * `rostopic echo /vins_estimator/imu_propagate`
   * Pick up the robot and remove it slowly in a small range. After putting it back in place, make sure VINS in a small deviation.
   * Channel 5 of the RC is dialed to the inside. Channel 6 is dialed to the lower side. The throttle is set to center.
   * `roslaunch px4ctrl run_ctrl.launch`
