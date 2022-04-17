@@ -126,7 +126,7 @@
 * Plotjuggler：
   * `sudo apt install ros-noetic-plotjuggler`
   * `sudo apt install ros-noetic-plotjuggler-ros`
-  * `rosrun plotjuggler plotjugller`
+  * `rosrun plotjuggler plotjuggler`
 * Net-tools：
   * `sudo apt install net-tools`
   * `ifconfig`
@@ -180,7 +180,7 @@
   
 * VINS外参精确自标定
   * `sh shfiles/rspx4.sh`
-  * `rostopic echo /vins_estimator/imu_propagate`
+  * `rostopic echo /vins_fusion/imu_propagate`
   * 拿起飞机沿着场地<font color="#dd0000">尽量缓慢</font>地行走，场地内光照变化不要太大，灯光不要太暗，<font color="#dd0000">不要使用会频闪的光源</font>，尽量多放些杂物来增加VINS用于匹配的特征点
   * 把`vins_output/extrinsic_parameter.txt`里的内容替换到`fast-drone-250.yaml`的`body_T_cam0`和`body_T_cam1`
   * 重复上述操作直到走几圈后VINS的里程计数据偏差收敛到满意值（一般在0.3米内）
@@ -193,7 +193,7 @@
 * 自动起飞：
 
   * `sh shfiles/rspx4.sh`
-  * `rostopic echo /vins_estimator/imu_propagate`
+  * `rostopic echo /vins_fusion/imu_propagate`
   * 拿起飞机进行缓慢的小范围晃动，放回原地后确认没有太大误差
   * 遥控器5通道拨到内侧，六通道拨到下侧，油门打到中位
   * `roslaunch px4ctrl run_ctrl.launch`
@@ -244,6 +244,12 @@
 		
 	Q: 为什么要挡住D435的结构光？
 	A: 结构光的意义在于使相机得到的深度图更准确，但双目图片上会显示出位置固定不变的点阵光斑，这对VIO的运行是不利的，所以需要关掉。
+	
+	Q: VINS飘怎么办？
+	A: 1. 检查环境中是否有强反光物体（瓷砖、玻璃等）
+	   2. 尽量缓慢地移动无人机，场景内不要有运动物体
+	   3. 尽量准确地测量初始外参
+	   4. 不要在运行vins的时候在远程桌面上运行rviz（会占用大量CPU资源），实在想开建议去配一下ROS多机，然后在笔记本上开
 
 
 
