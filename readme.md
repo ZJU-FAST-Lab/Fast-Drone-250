@@ -121,7 +121,7 @@
 
 ## 第八章：常用实验与调试软件的安装与使用
 
-* VScode：`sudo dpkg --i ***.deb`
+* VScode：`sudo dpkg -i ***.deb`
 * Terminator：`sudo apt install terminator`
 * Plotjuggler：
   * `sudo apt install ros-noetic-plotjuggler`
@@ -203,7 +203,7 @@
   
 * Ego-Planner实验
   * 自动起飞
-  * `roslaunch ego-planner single_run_in_exp.launch`
+  * `roslaunch ego_planner single_run_in_exp.launch`
   * `sh shfiles/record.sh`
   * 进入远程桌面 `roslaunch ego_planner rviz.launch`
   * 按下G键加鼠标左键点选目标点使无人机飞行
