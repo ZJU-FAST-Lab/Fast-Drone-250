@@ -1,6 +1,6 @@
 <font size=6> **从零制作自主空中机器人** </font>
 
-本文档是视频教程[从零制作自主空中机器人](https://www.bilibili.com/video/BV1WZ4y167me?p=1)的配套文档
+本文档是视频教程[从零制作自主空中机器人](https://www.bilibili.com/video/BV1WZ4y167me?p=1)的配套文档,github链接为https://github.com/ZJU-FAST-Lab/Fast-Drone-250
 
 ## <font color="#dd0000">安全事项</font>
 
