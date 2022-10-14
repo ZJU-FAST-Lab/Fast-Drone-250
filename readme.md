@@ -96,7 +96,7 @@
 
 * ROS安装
   * `sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'`
-  * `sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654'`
+  * `sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654`
   * `sudo apt update`
   * `sudo apt install ros-noetic-desktop-full`
   * `echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc`
@@ -247,6 +247,9 @@
 	Q: 能不能用D435i自带的imu运行vins?
 	A: 不行，因为435的imu噪声很大
 	
+	Q: 课程提供的v1.11.0固件有什么改动吗？必须使用这个固件吗？
+	A: 没有任何改动，是直接从px4官方下载的。目前仅在该版本上测试通过了本套代码，且在v1.13上测试失败，表现为VINS会经常崩溃。其他飞控/其他版本固件没有测试，有需要的同学可以自行测试。
+	
 	Q: QGC内测试电机不转怎么办？
 	A: 1. 检查电调是否支持dshot，不支持请自行查阅pwm电调校准方法。 
 	   2.如果是使用V5+飞控或其他把模拟和数字输出分开的飞控（特点是输出口标号为A1~A4 M1~M4），如果要用Dshot协议，请插在A口上
@@ -280,9 +283,15 @@
 	Q: 我想用NX做机载电脑，该另外做些什么？
 	A: 原则上不建议小白用NX，会多很多麻烦事，本课程并不涉及，助教也没有时间去帮你看。
 	   需要额外做下面的事：
-	   1. 修改VINS为GPU版本的，因此NX的CPU算力很差，跑课程的CPU版VINS一定跑不动
+	   1. 修改VINS为GPU版本的，因为NX的CPU算力很差，跑课程的CPU版VINS一定跑不动
 	   2. 解决NX固定及供电问题
 	   3. 解决realsense固定问题
 	   4. 解决NX用小底板时接口不够的问题
 	   5. 解决一系列arm和x86不兼容带来的问题
+	   
+	Q: 我按照教程修改sd卡里的etc/extra.txt后，IMU频率没有变成200hz怎么办？
+	A: 可能原因是你的固件不支持这样修改，可以尝试在启动mavros后执行：
+	rosrun mavros mavcmd long 511 105 5000 0 0 0 0 0 & sleep 1;
+	rosrun mavros mavcmd long 511 31 5000 0 0 0 0 0 & sleep 1;
+	
 
