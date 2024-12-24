@@ -14,6 +14,11 @@ find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
   pcl_conversions
 )
+
+catkin_package(
+  CATKIN_DEPENDS roscpp pcl_ros pcl_conversions
+)
+
 find_package(PCL REQUIRED)
 find_package(Eigen3 REQUIRED)
 

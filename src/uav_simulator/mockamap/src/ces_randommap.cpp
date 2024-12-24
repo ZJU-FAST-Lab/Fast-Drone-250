@@ -32,6 +32,7 @@
 
 //! @todo historical above
 #include "maps.hpp"
+#include <deque>
 
 using namespace std;
 using namespace mocka;
